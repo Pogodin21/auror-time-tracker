@@ -1,16 +1,36 @@
+// {
+//   "compilerOptions": {
+//     "esModuleInterop": true,
+//     "baseUrl": "./src",
+//     "paths": {
+//       "@app/*": ["app/*"],
+//       "@features/*": ["features/*"],
+//       "@pages/*": ["pages/*"],
+//       "@shared/*": ["shared/*"]
+//     },
+//     "jsx": "react-jsx",            
+//     "module": "esnext",           
+//     "target": "esnext",            
+//     "moduleResolution": "node" 
+//   }
+// }
+
 {
   "compilerOptions": {
-    "esModuleInterop": true,
-    "baseUrl": "./src",
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "baseUrl": "src",
     "paths": {
-      "@app/*": ["app/*"],
-      "@features/*": ["features/*"],
-      "@pages/*": ["pages/*"],
-      "@shared/*": ["shared/*"]
+      "@/*": ["*"]
     },
-    "jsx": "react-jsx",            
-    "module": "esnext",           
-    "target": "esnext",            
-    "moduleResolution": "node" 
-  }
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }

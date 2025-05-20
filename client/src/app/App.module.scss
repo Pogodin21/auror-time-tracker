@@ -1,0 +1,58 @@
+@import "../shared/styles/variables";
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 46px 0 13px 16px;
+  gap: 16px;
+}
+
+.menuIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.title {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 124%;
+  letter-spacing: 0.02em;
+  color: var(--text-t-brand-text);
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid var(--objects-o-line);
+  padding: 17px 0px 1px 0px;
+
+  button {
+    all: unset;
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 140%;
+    color: var(--text-t-quaternary);
+  }
+}
+
+.section {
+    justify-content: center;
+    height: 500px;
+    align-items: center;
+
+
+}
+
+.infoCards {
+  display: flex;
+  
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 135%;
+  letter-spacing: 0.01em;
+  color: var(--text-t-secondary);
+
+}
