@@ -7,12 +7,12 @@
   gap: 16px;
 }
 
-.menuIcon {
+.icon {
   width: 24px;
   height: 24px;
 }
 
-.title {
+.appTitle {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
@@ -20,39 +20,174 @@
   letter-spacing: 0.02em;
   color: var(--text-t-brand-text);
 }
+main {
+  width: 75vw; 
+  max-width: 100%;// 75% от ширины экрана
+  height: 100vh; // Полный вьюпорт по высоте
+  margin: 0 auto; // Центрирование по горизонтали
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+}
 
-.tabs {
-  display: flex;
-  justify-content: space-around;
+.navBar {
   border-bottom: 1px solid var(--objects-o-line);
-  padding: 17px 0px 1px 0px;
+  padding: 17px 0px 2px 0px;
 
-  button {
+  .navList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .navItem {
+    display: inline-block;
+  }
+
+  .navButton {
     all: unset;
     font-family: var(--font-family);
     font-weight: 300;
     font-size: 14px;
     line-height: 140%;
     color: var(--text-t-quaternary);
+    cursor: pointer;
+    position: relative;
+
+    &.active,
+    &:hover {
+      color: var(--text-t-secondary);
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--objects-o-line-selected);
+      }
+    }
   }
 }
 
-.section {
-    justify-content: center;
-    height: 500px;
-    align-items: center;
-
-
+.mainSection {
+  width: auto;
+  height: 500px;
+  // margin: 40px 50px;
+  margin-top: 5vh;
+  // margin-right: 3vw;
+  // margin-left: 3vw;
+  border: 1px black solid;
+  
 }
 
-.infoCards {
+.taskInfo {
+  // height: 37px;
+  height: 5vh;
+  width: 100%;
   display: flex;
-  
+
+  justify-content: space-between;
+
   font-family: var(--font-family);
   font-weight: 300;
   font-size: 12px;
   line-height: 135%;
   letter-spacing: 0.01em;
   color: var(--text-t-secondary);
+}
 
+.taskCard {
+  // height: 100%;
+  height: auto; // Позволяет блоку адаптироваться
+  min-width: 30vw;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-right: 12px;
+
+  .icon {
+    margin-right: 12px;
+  }
+
+  p {
+    font-family: var(--font-family);
+    font-weight: 300;
+
+    font-size: 12px;
+    line-height: 135%;
+    letter-spacing: 0.01em;
+    color: var(--text-t-secondary);
+  }
+
+  .taskType {
+    font-style: italic;
+  }
+}
+
+.timerWrapper {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .timer {
+    width: 66vw; // 2/3 ширины экрана
+    max-width: 240px; // Ограничение максимального размера
+    min-width: 160px; // Минимальная ширина, ниже которой не сужается
+    aspect-ratio: 1 / 1; // Сохранение круглой формы
+    border: 1px var(--objects-o-tracker) solid;
+    border-radius: 50%;
+
+  
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .timerDisplay {
+      font-family: var(--third-family);
+      font-weight: 300;
+      font-size: 16px;
+      text-align: center;
+      color: var(--text-t-brand-text);
+    }
+
+    .taskTitle {
+      margin-top: 10px;
+
+      font-family: var(--font-family);
+      font-style: italic;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 140%;
+      letter-spacing: 0.01em;
+      text-align: center;
+      color: var(--text-t-secondary);
+    }
+  }
+}
+
+.toggleWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .toggleSwitch {
+    display: block;
+
+    .toggleStatus {
+      font-family: var(--font-family);
+      font-style: italic;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 140%;
+      letter-spacing: 0.01em;
+      text-align: center;
+      color: var(--text-t-quinary);
+    }
+  }
 }
