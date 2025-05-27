@@ -1,0 +1,19 @@
+.taskCard {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  margin-right: 0.625rem; // 10px
+  overflow: hidden;
+
+  .icon {
+    margin-right: 0.75rem; // 12px
+  }
+
+  p {
+    font-size: clamp(0.75rem, 4vw, 1rem); // 12px–16px
+  }
+
+  .taskType {
+    font-style: italic;
+  }
+}

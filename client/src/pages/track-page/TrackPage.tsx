@@ -1,7 +1,7 @@
 import { MainSection } from "@/widgets/main-section";
-import styles from './MainPage.module.scss'
+import styles from './TrackPage.module.scss'
 
-export const MainPage = () => {
+export const TrackPage = () => {
   return (
     <main className={styles.main}>
       <MainSection />

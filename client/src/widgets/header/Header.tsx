@@ -1,11 +1,16 @@
 import styles from './Header.module.scss';
-import menuIcon from '@/shared/assets/icons/menu-alt-1.svg';
 
-export const Header = () => {
+interface HeaderProps {
+  icon: string;
+  alt: string;
+  title: string;
+}
+
+export const Header = ({ icon, alt, title }: HeaderProps) => {
   return (
     <header className={styles.header}>
-      <img className={styles.icon} src={menuIcon} alt="Menu" />
-      <h1 className={styles.appTitle}>Auror Time</h1>
+      <img className={styles.icon} src={icon} alt={alt} />
+      <h1 className={styles.appTitle}>{title}</h1>
     </header>
   );
 };
