@@ -1,0 +1,13 @@
+.toggleWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .toggleStatus {
+    font-style: italic;
+    font-size: 0.75rem; // 12px
+    line-height: 140%;
+    text-align: center;
+    color: var(--text-t-quinary);
+  }
+}

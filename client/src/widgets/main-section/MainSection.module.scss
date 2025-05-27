@@ -1,0 +1,42 @@
+.mainSection {
+  width: 70%;
+  height: 70vh;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: var(--font-family);
+  font-weight: 300;
+  line-height: 135%;
+  letter-spacing: 0.01em;
+  color: var(--text-t-secondary);
+}
+
+
+.taskInfo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: clamp(0.75rem, 4vw, 1rem); 
+}
+
+.taskCard {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  margin-right: 0.625rem; // 10px
+  overflow: hidden;
+
+  .icon {
+    margin-right: 0.75rem; // 12px
+  }
+
+  p {
+    font-size: clamp(0.75rem, 4vw, 1rem); // 12px–16px
+  }
+
+  .taskType {
+    font-style: italic;
+  }
+}
