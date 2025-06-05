@@ -1,0 +1,39 @@
+.taskDayItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 16px;
+
+
+  &__info {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  &__color {
+    width: 8px;
+    height: 8px;
+    margin-top: 4px;
+    display: block;
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 140%;
+    color: var(--text-t-primary);
+  }
+
+  &__project,
+  &__time {
+    font-size: 12px;
+    line-height: 135%;
+    letter-spacing: 0.01em;
+    color: var(--text-t-hexadecimal);
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
